@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
+import { ProductModule } from './product/product.module';
 
 
 @Module({
@@ -13,7 +14,7 @@ import { ConfigModule } from '@nestjs/config';
       envFilePath: '.env' 
     }),
     UsersModule, 
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/nest') 
+    MongooseModule.forRoot('mongodb://127.0.0.1:27017/nest'), ProductModule 
   ],
   controllers: [AppController],
   providers: [AppService],

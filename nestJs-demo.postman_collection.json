@@ -7,6 +7,75 @@
 	},
 	"item": [
 		{
+			"name": "product",
+			"item": [
+				{
+					"name": "init products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}product/seed",
+							"host": [
+								"{{url}}product"
+							],
+							"path": [
+								"seed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}product",
+							"host": [
+								"{{url}}product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "signup",
 			"request": {
 				"method": "POST",
